@@ -6,7 +6,7 @@ class AppTextStyle {
       {Color? color, String? fontFamily, FontWeight? fontWeight}) {
     return TextStyle(
       color: color ?? AppColors.textDarkBlackColor,
-      fontSize: 14,
+      fontSize: 10,
       fontWeight: fontWeight ?? FontWeight.normal,
     );
   }

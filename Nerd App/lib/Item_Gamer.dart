@@ -36,20 +36,20 @@ class ItemGamer extends StatelessWidget {
       child: Image.asset(
         // _homeController?.homePageSliderList?[itemIndex].sliderImage ?? "",
         Drawables.avatarSitting,
-        fit: BoxFit.cover,
+        fit: BoxFit.contain,
       ),
     );
   }
 
 
   Widget _titleView() {
-    return AppText.normal_14( "Player 1" ,
+    return AppText.normal_10( "Player 1" ,
         fontWeight: FontWeight.w500);
   }
 
 
   Widget _priceView() {
-    return AppText.normal_14("10 points ""}", fontWeight: FontWeight.w700);
+    return AppText.normal_10("10 points ""}", fontWeight: FontWeight.w700);
   }
 
 }

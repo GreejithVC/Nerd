@@ -23,7 +23,7 @@ class GameRooms extends StatelessWidget {
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
       padding: EdgeInsets.all(16),
-      crossAxisCount: 8,
+      crossAxisCount: 6,
       // itemCount: _homeController?.comboList?.length ?? 0,
       itemCount: 100,
       itemBuilder: (BuildContext context, int index) {

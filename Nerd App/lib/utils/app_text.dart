@@ -3,7 +3,7 @@ import 'app_text_style.dart';
 
 class AppText {
 
-  static Widget normal_14(String? text,
+  static Widget normal_10(String? text,
       {Color? color, String? fontFamily, FontWeight? fontWeight}) {
     return Text(
       text ?? "",
