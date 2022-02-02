@@ -1,8 +1,5 @@
-import 'dart:async';
-import 'dart:io';
+import 'package:flutter/material.dart';
 
-import 'package:flutter/cupertino.dart';
-
-class AppController with ChangeNotifier {
-
+class GameController with ChangeNotifier {
+  int index = 0;
 }

@@ -12,7 +12,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MultiProvider(
     providers: [
-      ChangeNotifierProvider(create: (_) => AppController()),
+      ChangeNotifierProvider(create: (_) => GameController()),
     ],
     child: MyApp(),
   ));

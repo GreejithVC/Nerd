@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:nerd/resources/app_colors.dart';
 import 'package:nerd/utils/app_text.dart';
 
-import '../game_rooms.dart';
-import '../sample_view.dart';
+import 'game_rooms.dart';
+import 'credits_view.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -18,13 +18,13 @@ class HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         backgroundColor: AppColors.bgWhiteColor,
         appBar: AppBar(
-          backgroundColor: AppColors.bgWhiteColor,
+          backgroundColor: AppColors.primaryColor,
           elevation: 0,
           flexibleSpace: Container(
             alignment: Alignment.bottomCenter,
             child: TabBar(
               tabs: [
-                _tabView("GAME ROOMS"),
+                _tabView("GAME ROOMS",),
                 _tabView("CREDITS"),
               ],
             ),
@@ -44,7 +44,7 @@ class HomeScreenState extends State<HomeScreen> {
 
   Widget _tabView(String? title) {
     return Tab(
-      child: AppText.large_20(title ?? "", fontWeight: FontWeight.w500),
+      child: AppText.large_20(title ?? "", fontWeight: FontWeight.w500,color: AppColors.bgWhiteColor),
     );
   }
 }

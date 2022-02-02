@@ -6,11 +6,12 @@ import 'package:nerd/resources/drawables.dart';
 import 'package:nerd/utils/app_text.dart';
 
 class ItemGamer extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,width: 100,
+      padding: EdgeInsets.only(top: 10),
+      height: 100,
+      width: 100,
       decoration: BoxDecoration(
         border: Border.all(color: AppColors.disabledTextColor),
         borderRadius: BorderRadius.circular(4),
@@ -18,6 +19,7 @@ class ItemGamer extends StatelessWidget {
       child: Column(
         children: [
           _imageView(),
+          Spacer(),
           _titleView(),
           _priceView(),
         ],
@@ -28,10 +30,12 @@ class ItemGamer extends StatelessWidget {
   Widget _imageView() {
     return Container(
       height: 50,
-      width: double.infinity,clipBehavior: Clip.antiAlias,
+      width: double.infinity,
+      clipBehavior: Clip.antiAlias,
       // margin: EdgeInsets.only(top: 14, left: 14, right: 14),
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(topLeft: Radius.circular(8),topRight: Radius.circular(8))
+          // borderRadius: BorderRadius.only(
+          //     topLeft: Radius.circular(8), topRight: Radius.circular(8))
       ),
       child: Image.asset(
         // _homeController?.homePageSliderList?[itemIndex].sliderImage ?? "",
@@ -41,15 +45,11 @@ class ItemGamer extends StatelessWidget {
     );
   }
 
-
   Widget _titleView() {
-    return AppText.normal_10( "Player 1" ,
-        fontWeight: FontWeight.w500);
+    return AppText.normal_10("Player 1", fontWeight: FontWeight.w500);
   }
-
 
   Widget _priceView() {
-    return AppText.normal_10("10 points ""}", fontWeight: FontWeight.w700);
+    return AppText.normal_10("10 points", fontWeight: FontWeight.w700);
   }
-
 }
