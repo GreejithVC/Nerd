@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nerd/resources/app_colors.dart';
+import 'package:nerd/room_list.dart';
 import 'package:nerd/utils/app_text.dart';
 
 import 'game_rooms.dart';
@@ -32,7 +33,7 @@ class HomeScreenState extends State<HomeScreen> {
         ),
         body: TabBarView(
           children: [
-            GameRooms(),
+            RoomList(),
             CreditsView(),
 
             // second tab bar viiew widget
