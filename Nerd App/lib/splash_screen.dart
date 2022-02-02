@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:nerd/resources/app_colors.dart';
 import 'package:nerd/resources/drawables.dart';
+import 'package:nerd/utils/dash_board.dart';
 import 'package:nerd/utils/widget_utils.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -19,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(
-            builder: (context) => LoginScreen(),
+            builder: (context) => HomeScreen(),
           ),
               (Route<dynamic> route) => false);
     });
@@ -31,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return WillPopScope(
       onWillPop: () => WidgetUtils?.showExitPopUp(context),
       child: Scaffold(
-        backgroundColor: AppColors.bgWhiteColor,
+        backgroundColor: AppColors.textDarkBlackColor,
         body: Center(child: Image.asset(Drawables.logo,width: 250,fit: BoxFit.contain)),
       ),
     );
