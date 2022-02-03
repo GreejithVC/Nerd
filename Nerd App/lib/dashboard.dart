@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:nerd/resources/app_colors.dart';
 import 'package:nerd/room_list.dart';
 import 'package:nerd/utils/app_text.dart';
-
-import 'game_rooms.dart';
 import 'credits_view.dart';
 
 class HomeScreen extends StatefulWidget {

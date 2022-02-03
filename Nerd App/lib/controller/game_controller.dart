@@ -8,7 +8,6 @@ import 'package:nerd/utils/app_text.dart';
 import 'package:nerd/utils/widget_utils.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
-import '../Item_Gamer.dart';
 
 class GameController with ChangeNotifier {
   int currentIndex = 0;
