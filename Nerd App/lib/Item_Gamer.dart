@@ -13,27 +13,25 @@ class ItemGamer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return person?.isDel == true
-        ? Container(width: 0, height: 0)
-        : Container(
-            height: 100,
-            decoration: BoxDecoration(
-              border: Border.all(color: AppColors.disabledTextColor),
-              borderRadius: BorderRadius.circular(4),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                _imageView(),
-                _titleView(),
-              ],
-            ),
-          );
+    return Container(
+      height: 100,
+      decoration: BoxDecoration(
+        border: Border.all(color: AppColors.disabledTextColor),
+        borderRadius: BorderRadius.circular(4),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          _imageView(),
+          _titleView(),
+        ],
+      ),
+    );
   }
 
   Widget _imageView() {
     return Image.asset(
-      Drawables.avatarSitting,
+      person?.isDel == true ? Drawables.empty_chair : Drawables.avatarSitting,
       fit: BoxFit.contain,
       height: 50,
     );
@@ -42,7 +40,8 @@ class ItemGamer extends StatelessWidget {
   Widget _titleView() {
     return Padding(
       padding: const EdgeInsets.only(top: 8),
-      child: AppText.normal_14(person?.id?.toString() ?? "",
+      child: AppText.normal_14(
+          person?.isDel == true ? "" : person?.id?.toString() ?? "",
           fontWeight: FontWeight.w500),
     );
   }
