@@ -41,7 +41,7 @@ class _GameRoomsState extends State<GameRooms> {
           actions: [
             GestureDetector(
                 onTap: () {
-                  _gameController?.startGame();
+                  _gameController?.startGame(context);
                 },
                 child: Container(
                     margin: EdgeInsets.only(right: 32),

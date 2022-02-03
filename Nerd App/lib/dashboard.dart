@@ -24,8 +24,10 @@ class HomeScreenState extends State<HomeScreen> {
           flexibleSpace: Container(
             alignment: Alignment.bottomCenter,
             child: TabBar(
+              indicatorColor: AppColors.textWhiteColor,
+              indicatorWeight: 5,
               tabs: [
-                _tabView("GAME ROOMS",),
+                _tabView("GAME ROOMS"),
                 _tabView("CREDITS"),
               ],
             ),
@@ -45,7 +47,8 @@ class HomeScreenState extends State<HomeScreen> {
 
   Widget _tabView(String? title) {
     return Tab(
-      child: AppText.large_20(title ?? "", fontWeight: FontWeight.w500,color: AppColors.bgWhiteColor),
+      child: AppText.large_20(title ?? "",
+          fontWeight: FontWeight.w500, color: AppColors.bgWhiteColor),
     );
   }
 }
