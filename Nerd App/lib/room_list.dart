@@ -25,7 +25,6 @@ class _RoomListState extends State<RoomList> {
   Widget _offerProductsBannerView() {
     return GestureDetector(
       onTap: () {
-        Provider.of<GameController>(context, listen: false).initPersonList(20);
         Navigator.push(
           context,
           MaterialPageRoute(

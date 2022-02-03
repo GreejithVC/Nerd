@@ -4,6 +4,15 @@ import 'package:nerd/resources/app_colors.dart';
 import 'package:nerd/resources/app_strings.dart';
 
 class WidgetUtils {
+  static void showSnackBar(BuildContext context, String? message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message ?? ""),
+        duration: Duration(seconds: 2),
+      ),
+    );
+  }
+
   static Future<bool> showExitPopUp(BuildContext context) async {
     return await showPopUp(context,
         title: "Confirmation",
