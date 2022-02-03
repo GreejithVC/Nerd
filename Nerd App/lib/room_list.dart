@@ -28,7 +28,7 @@ class _RoomListState extends State<RoomList> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => GameRooms(),
+            builder: (context) => GameRooms(personCount: 100),
           ),
         );
       },

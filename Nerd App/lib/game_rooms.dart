@@ -10,6 +10,10 @@ import 'package:scroll_to_index/scroll_to_index.dart';
 import 'Item_Gamer.dart';
 
 class GameRooms extends StatefulWidget {
+  final int personCount;
+
+  const GameRooms({Key? key,required this.personCount}) : super(key: key);
+
   @override
   State<GameRooms> createState() => _GameRoomsState();
 }
@@ -21,7 +25,7 @@ class _GameRoomsState extends State<GameRooms> {
   void initState() {
     super.initState();
     Provider.of<GameController>(context, listen: false)
-        .initPersonList(count: 50, context: context);
+        .initPersonList(count: widget.personCount, context: context);
   }
 
   @override
